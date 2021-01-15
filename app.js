@@ -9,10 +9,10 @@ app.use(express.static(path.join(__dirname, "../clientApp/dist")));
 
 // make server listen on some port
 if (process.env.NODE_ENV === "production") {
-  app.use("/", express.static(path.join(__dirname, "client", "build")));
+  app.use("/", express.static(path.join(__dirname, "clientApp", "build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "clientApp", "build", "index.html"));
   });
 }
 
