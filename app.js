@@ -1,12 +1,12 @@
 const express = require("express");
 const config = require("config");
 const path = require("path");
+const mongoose = require("mongoose");
 
 const app = express();
 
 // initialize server app
-app.use(express.static(path.join(__dirname, "../clientApp/dist")));
-
+app.use("/api/auth", require("./routes/auth.routes"));
 // make server listen on some port
 if (process.env.NODE_ENV === "production") {
   app.use("/", express.static(path.join(__dirname, "clientApp", "build")));
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 
 const PORT = config.get("port") || 5000;
 
-function start() {
+async function start() {
   try {
     app.listen(PORT, () =>
       console.log(`App has been started on port ${PORT}...`)
