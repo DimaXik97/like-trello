@@ -31,6 +31,7 @@ const Header:React.FC<HeaderProps>=({isAuth=true})=>{
                 buttonText="Login"
                 onSuccess={login}
                 onFailure={(d)=>console.log("error",d)}
+                cookiePolicy={'single_host_origin'}
             />: "Login"}</>
             
         </header>
