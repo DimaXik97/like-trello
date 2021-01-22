@@ -1,8 +1,21 @@
 .header {
-  width: 85%;
+  width: calc(100vw - 200px);
   height: 75px;
-  margin-left: 15%;
+  margin-left: 200px;
   background: linear-gradient(0.25turn, #0288d1, 15%, #03a9f4);
   display: flex;
   justify-content: space-between;
+}
+
+.login {
+  height: 45px;
+  margin: auto 10px;
+}
+
+.title {
+  font-size: 36px;
+  font-family: "Comic Sans MS", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  margin: auto 10px;
 }

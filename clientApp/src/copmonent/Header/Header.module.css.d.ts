@@ -1,6 +1,8 @@
 declare namespace HeaderModuleCssNamespace {
   export interface IHeaderModuleCss {
     header: string;
+    login: string;
+    title: string;
   }
 }
 

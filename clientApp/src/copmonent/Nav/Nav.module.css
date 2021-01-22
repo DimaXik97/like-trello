@@ -1,8 +1,64 @@
 .navBar {
-  width: 15%;
+  width: 200px;
   height: 100vh;
   position: absolute;
   left: 0;
   top: 0;
   background-color: #0288d1;
+}
+.logo {
+  position: absolute;
+  font-family: Goose, sans-serif;
+  margin: 0 0 0 16px;
+  color: #fff;
+  font-size: 72px;
+  animation: springIn 0.5s linear 0s 1 forwards;
+}
+footer {
+  position: absolute;
+  bottom: 12px;
+  left: 4px;
+  color: #bdbdbd;
+}
+
+.logo p {
+  margin: 0;
+  transform: rotate(-25deg);
+}
+.logoAnimation1 {
+  animation: logo1 10s linear 2s infinite forwards;
+}
+.logoAnimation2 {
+  animation: logo2 10s linear 2s infinite forwards;
+}
+
+@keyframes logo1 {
+  4% {
+    transform: rotate(-15deg);
+  }
+  8% {
+    transform: rotate(-25deg);
+  }
+}
+@keyframes logo2 {
+  4% {
+    transform: rotate(-35deg);
+  }
+  8% {
+    transform: rotate(-25deg);
+  }
+}
+@keyframes springIn {
+  0% {
+    transform: translateY(-70px);
+  }
+  60% {
+    transform: translateY(15px);
+  }
+  85% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

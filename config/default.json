@@ -1,6 +1,6 @@
 {
     "port": 5000,
     "baseUrl": "http://localhost:5000",
-    "mongoUrl": "mongodb+srv://admin:12345Qaz!@cluster0.h6eey.mongodb.net/app?retryWrites=true&w=majority",
+    "mongoUrl": "mongodb+srv://admin:smvKWqJFjGNZ04o6@cluster0.h6eey.mongodb.net/app?retryWrites=true&w=majority",
     "jwtSecret": "bJBVVZbSvp"
   }

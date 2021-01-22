@@ -1,6 +1,12 @@
 declare namespace NavModuleCssNamespace {
   export interface INavModuleCss {
+    logo: string;
+    logo1: string;
+    logo2: string;
+    logoAnimation1: string;
+    logoAnimation2: string;
     navBar: string;
+    springIn: string;
   }
 }
 

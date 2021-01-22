@@ -7,6 +7,7 @@ const app = express();
 
 // initialize server app
 app.use("/api/auth", require("./routes/auth.routes"));
+app.use("/api/board", require("./routes/board.routes"));
 // make server listen on some port
 if (process.env.NODE_ENV === "production") {
   app.use("/", express.static(path.join(__dirname, "clientApp", "build")));
@@ -20,6 +21,10 @@ const PORT = config.get("port") || 5000;
 
 async function start() {
   try {
+    await mongoose.connect(config.get("mongoUrl"), {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     app.listen(PORT, () =>
       console.log(`App has been started on port ${PORT}...`)
     );
