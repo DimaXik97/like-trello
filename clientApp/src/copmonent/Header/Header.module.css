@@ -10,6 +10,7 @@
 .login {
   height: 45px;
   margin: auto 10px;
+  display: flex;
 }
 
 .title {
@@ -18,4 +19,15 @@
   color: #fff;
   text-transform: uppercase;
   margin: auto 10px;
+}
+.icon {
+  margin: 0 8px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  opacity: 0.3;
+  color: #fff;
+}
+.icon:hover {
+  opacity: 1;
 }

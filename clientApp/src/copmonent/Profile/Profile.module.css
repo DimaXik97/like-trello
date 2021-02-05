@@ -11,3 +11,11 @@
   font-family: Roboto, sans-serif;
   cursor: pointer;
 }
+.name {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 24px;
+  margin-right: 16px;
+}

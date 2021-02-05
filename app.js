@@ -4,9 +4,11 @@ const path = require("path");
 const mongoose = require("mongoose");
 
 const app = express();
+app.use(express.json({ extended: true }));
 
 // initialize server app
 app.use("/api/auth", require("./routes/auth.routes"));
+app.use("/api/board", require("./routes/saveBoard.routes"));
 app.use("/api/board", require("./routes/board.routes"));
 // make server listen on some port
 if (process.env.NODE_ENV === "production") {

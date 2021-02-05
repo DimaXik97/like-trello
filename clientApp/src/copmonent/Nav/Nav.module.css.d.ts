@@ -6,6 +6,7 @@ declare namespace NavModuleCssNamespace {
     logoAnimation1: string;
     logoAnimation2: string;
     navBar: string;
+    navImg: string;
     springIn: string;
   }
 }

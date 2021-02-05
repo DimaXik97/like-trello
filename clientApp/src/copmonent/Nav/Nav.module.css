@@ -31,6 +31,9 @@ footer {
 .logoAnimation2 {
   animation: logo2 10s linear 2s infinite forwards;
 }
+.navImg {
+  margin-top: 200px;
+}
 
 @keyframes logo1 {
   4% {

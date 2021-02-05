@@ -1,24 +1,21 @@
 import React from "react";
+import moment from "moment";
 
-import styles from './BoardInformation.module.css'
+import { IBoard } from "../../types";
+import styles from "./BoardInformation.module.css";
 
-interface BoardInformationProps{
-    owner?: string;
-    createdAt?: string;
-    status?: Boolean
+interface BoardInformationProps {
+  curentBoard: IBoard;
 }
-const BoardInformation:React.FC<BoardInformationProps>=({
-    owner="dimaxik97@gmail.com",
-    createdAt="24.10.2012",
-    status=true
-})=>{
-    return(
-        <div className={styles.container}>
-            <div>Owner: {owner}</div>
-            <div>Created at: {createdAt}</div>
-            <div>Status: {status?"Public":"Private"}</div>
-        </div>
-    )
-}
+const BoardInformation: React.FC<BoardInformationProps> = ({ curentBoard }) => {
+  const { owner, createdAt, isPublic } = curentBoard;
+  return (
+    <div className={styles.container}>
+      <div>Owner: {owner}</div>
+      <div>Created at: {moment(createdAt).format("DD.MM.YYYY HH:mm:ss")}</div>
+      <div>Status: {isPublic ? "Public" : "Private"}</div>
+    </div>
+  );
+};
 
 export default BoardInformation;

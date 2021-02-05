@@ -11,7 +11,6 @@ var jsonParser = bodyParser.json();
 router.post("/login", jsonParser, async (req, res) => {
   try {
     const googleJwt = jwt.decode(req.body.token);
-    console.log(googleJwt);
     const candidate = await User.findOne({ email: googleJwt.email });
     if (!candidate) {
       const user = new User({
@@ -31,7 +30,7 @@ router.post("/login", jsonParser, async (req, res) => {
       familyName: googleJwt["family_name"],
       locale: googleJwt.locale,
     };
-
+    googleJwt.exp = googleJwt.exp + 365 * 60 * 60 * 24;
     const token = jwt.sign(googleJwt, config.get("jwtSecret"));
     res.json({ token, user });
   } catch (e) {

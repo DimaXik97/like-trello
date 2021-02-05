@@ -1,6 +1,7 @@
 declare namespace ProfileModuleCssNamespace {
   export interface IProfileModuleCss {
     logoutBtn: string;
+    name: string;
   }
 }
 
